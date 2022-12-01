@@ -8,6 +8,6 @@ a = [[None]*colunas_a]*linhas_a
 
 for i in range(linhas_a):
     for j in range(colunas_a):
-        a[i][j] = float(input())
+        a[i][j] = int(input())
         
 bp=1

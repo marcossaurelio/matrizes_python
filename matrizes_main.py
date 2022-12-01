@@ -1,5 +1,5 @@
-linhas_a = int(input('Quantidade de linhas do vetor A: '))
-colunas_a = int(input('Quantidade de colunas do vetor A: '))
+linhas_a = int(input('Quantidade de linhas da matriz A: '))
+colunas_a = int(input('Quantidade de colunas da matriz A: '))
 
 a = []
 
@@ -10,8 +10,8 @@ for l in range(linhas_a):
     a.append(linha)
     
     
-linhas_b = int(input('Quantidade de linhas do vetor B: '))
-colunas_b = int(input('Quantidade de colunas do vetor B: '))
+linhas_b = int(input('Quantidade de linhas da matriz B: '))
+colunas_b = int(input('Quantidade de colunas da matriz B: '))
 
 b = []
 
@@ -20,4 +20,3 @@ for l in range(linhas_b):
     for c in range(colunas_b):
         linha.append(float(input(f'Digite o elemento b[{l}][{c}]: ')))
     b.append(linha)
-    

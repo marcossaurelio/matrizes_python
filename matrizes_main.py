@@ -113,12 +113,37 @@ def medias_matriz_a():
             media_colunas.append(round(soma/elementos, 2))
             soma = 0
             elementos = 0
-        print(f'Média de cada linha em A: {media_linhas}')
-        print(f'Média de cada coluna em A: {media_colunas}')
+        print(f'Média de cada linha em A:')
+        print_matriz(media_linhas)
+        print(f'Média de cada coluna em A:')
+        print(media_colunas)
+        
+        
+def verifica_primo(x):
+    x = int((x**2)**0.5)
+    s = 0
+    for i in range(1,x+1):
+        if x%i == 0:
+            s += 1
+    if s == 2:
+        return True
+    else:
+        return False
+            
         
 def transposta_x_ou_primos_b():
-    t = transpor_matriz(b)
-    
+    if len(b)!=len(b[0]) and len(b) != 1 and len(b[0]) != 1:
+        t = transpor_matriz(b)
+        x = t.copy()
+        for i in range(len(x)):
+            for j in range(len(x[i])):
+                elemento = t[i][j]
+                x[i][j] = elemento*2.5
+        print(f'Transposta de B multiplicada por 2,5:')
+        print_matriz(x)
+    else:
+        pass
+        
         
 
 linhas_a = int(input('Quantidade de linhas da matriz A: '))

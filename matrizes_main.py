@@ -142,7 +142,12 @@ def transposta_x_ou_primos_b():
         print(f'Transposta de B multiplicada por 2,5:')
         print_matriz(x)
     else:
-        pass
+        soma_primos = 0
+        for i in range(len(x)):
+            for j in range(len(x[i])):
+                if verifica_primo(b[i][j]) == True:
+                    soma_primos += 1
+        print(f'A matriz B possui {soma_primos} números primos')
         
         
 

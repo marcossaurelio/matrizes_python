@@ -149,6 +149,17 @@ def transposta_x_ou_primos_b():
                     soma_primos += 1
         print(f'A matriz B possui {soma_primos} números primos')
         
+def transformar_linha_coluna_quadrada():
+    n = input('Informe a matriz a ser operada:\n0. B\n1. A\n')
+    while n != '0' and n != '1':
+        print('Opção inválida! Digite 0 ou 1')
+        n = input('Informe a matriz a ser operada:\n0. B\n1. A\n')
+    if n == '1':
+        z = a.copy()
+    if n == '0':
+        z = b.copy()
+    if len(z) == 1 or len(z[0]) == 1:
+        pass
         
 
 linhas_a = int(input('Quantidade de linhas da matriz A: '))

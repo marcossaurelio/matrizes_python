@@ -158,8 +158,50 @@ def transformar_linha_coluna_quadrada():
         z = a.copy()
     if n == '0':
         z = b.copy()
-    if len(z) == 1 or len(z[0]) == 1:
-        pass
+    if len(z) == 1:
+        y = []
+        for i in range(len(z[0])):
+            linha = []
+            for j in range(len(z[0])):
+                if i == j:
+                    linha.append(z[0][i])
+                else:
+                    linha.append(0)
+            y.append(linha)
+    elif len(z[0]) == 1:
+        y = []
+        for i in range(len(z)):
+            linha = []
+            for j in range(len(z)):
+                if i == j:
+                    linha.append(z[i][0])
+                else:
+                    linha.append(0)
+            y.append(linha)
+    elif len(z) == len(z[0]):
+        y = []
+        for i in range(len(z)):
+            linha = []
+            for j in range(len(z[0])):
+                if i == j:
+                    linha.append(z[i][j])
+            y.append(linha)
+    else:
+        soma = 0
+        for i in range(len(z)):
+            for j in range(len(z[0])):
+                soma += z[i][j]
+        y = soma
+    return y
+
+def produto_matricial():
+    if len(a[0]) == len(b):
+        prod = []
+        for i in range(len(a)):
+            linha = []
+            for j in range(len(b[0])):
+                linha.append(a[i])
+                #a00*b01 + a01*b11 + a02*b21
         
 
 linhas_a = int(input('Quantidade de linhas da matriz A: '))

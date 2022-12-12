@@ -196,12 +196,17 @@ def transformar_linha_coluna_quadrada():
 
 def produto_matricial():
     if len(a[0]) == len(b):
-        prod = []
+        y = []
         for i in range(len(a)):
             linha = []
             for j in range(len(b[0])):
-                linha.append(a[i])
-                #a00*b01 + a01*b11 + a02*b21
+                soma = 0
+                for k in range(len(a[0])):
+                    soma += a[i][k]*b[k][j]
+                linha.append(soma)
+            y.append(linha)
+        print('Produto matricial entre A e B:')
+        print_matriz(y)
         
 
 linhas_a = int(input('Quantidade de linhas da matriz A: '))
@@ -225,3 +230,8 @@ for l in range(linhas_b):
     
 c = transpor_matriz(a)
 d = transpor_matriz(b)
+
+user_option = ''
+
+while user_option != 00:
+    user_option = input('Digite uma opção:\n1. Multiplicar matriz por número inteiro\n2. Exibir transposta da matriz\n3. Somar matrizes A e B\n4. Diagonais de A\n5. Elementos abaixo e acima da diagonal principal de B\n6. Média de A por linha e coluna\n7. Transposta de B multiplicada por 2,5\n8. Matriz quadrada a partir de linha/coluna\n9. Produto Matricial entre A e B\n0. Reiniciar programa\n00. Encerrar programa')

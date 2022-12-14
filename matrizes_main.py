@@ -144,10 +144,10 @@ def medias_matriz_a():
         
         
 def verifica_primo(x):
-    x = int((x**2)**0.5)
+    y = int((x**2)**0.5)
     s = 0
-    for i in range(1,x+1):
-        if x%i == 0:
+    for i in range(1,y+1):
+        if y%i == 0:
             s += 1
     if s == 2:
         return True
@@ -237,6 +237,8 @@ def produto_matricial():
             y.append(linha)
         print('Produto matricial entre A e B:')
         print_matriz(y)
+    else:
+        print('Número de colunas de A é diferente do número de linhas de B. Impossível operar produto matricial.')
 
 user_option = '0'
 
@@ -268,7 +270,7 @@ while user_option != '00':
         elif user_option == '0':
             a = cadastrar_matriz_a()
             b = cadastrar_matriz_b()
-        opt = input('Digite 1 para acessar o menu:\n')
+        opt = input('Tecle enter para acessar o menu:\n')
         user_option = input('Selecione uma opção:\n1. Multiplicar matriz por número inteiro\n2. Exibir transposta da matriz\n3. Somar matrizes A e B\n4. Diagonais de A\n5. Elementos abaixo e acima da diagonal principal de B\n6. Média de A por linha e coluna\n7. Transposta de B multiplicada por 2,5\n8. Matriz quadrada a partir de linha/coluna\n9. Produto Matricial entre A e B\n0. Reiniciar programa\n00. Encerrar programa\n')
         while (user_option not in ['0','1','2','3','4','5','6','7','8','9','00']):
             user_option = input('Digite uma opção:\n1. Multiplicar matriz por número inteiro\n2. Exibir transposta da matriz\n3. Somar matrizes A e B\n4. Diagonais de A\n5. Elementos abaixo e acima da diagonal principal de B\n6. Média de A por linha e coluna\n7. Transposta de B multiplicada por 2,5\n8. Matriz quadrada a partir de linha/coluna\n9. Produto Matricial entre A e B\n0. Reiniciar programa\n00. Encerrar programa\n')
